@@ -28,7 +28,7 @@ export const NavList = styled.ul`
   display: flex;
   justify-content: space-around;
   width: 56%;
-  color: white;
+  color: #ffffff;
   height: auto;
   font-size: 14px;
 `;
