@@ -8,7 +8,7 @@ import {
   NavList,
   NavItem,
 } from './styles';
-import logo from '../../assets/images/logo.svg';
+import logo from '../../assets/images/landingPage/logo.svg';
 import Button from '../Button';
 
 function Header() {
