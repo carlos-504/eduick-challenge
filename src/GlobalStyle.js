@@ -1,5 +1,17 @@
 import { createGlobalStyle } from 'styled-components';
 
+// Global Variables
+// Dashboard
+export const white = '#ffffff';
+export const beige = '#ffe8b2';
+export const primaryPurple = '#7955e8';
+export const borderColor = '#ffffff8a';
+export const primaryDetailColor = '#ffeaa4';
+export const secondaryDetailColor = '#864efd';
+export const circleDetailColor = '#ffc700';
+export const fontDash = 'Poppins';
+
+// Reset CSS
 export const GlobalStyle = createGlobalStyle`
 * {
   box-sizing: border-box;

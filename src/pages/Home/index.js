@@ -18,11 +18,11 @@ import {
   GroupActions,
   RoleBox,
   InputRadio,
-  DetailsYellow,
-  DetailsPurple,
+  PrimaryDetail,
+  SecondyDetail,
   DetailsCircle,
-  DetailsYellowRight,
-  DetailsPurpleRight,
+  PrimaryDetailRight,
+  SecondyDetailRight,
 } from './styles';
 
 function Home() {
@@ -33,8 +33,8 @@ function Home() {
         <ContainerWrap>
           <div>
             <LandImg src={landImg} alt="image-home" />
-            <DetailsYellow></DetailsYellow>
-            <DetailsPurple></DetailsPurple>
+            <PrimaryDetail></PrimaryDetail>
+            <SecondyDetail></SecondyDetail>
             <DetailsCircle></DetailsCircle>
           </div>
           <ContentPage>
@@ -70,8 +70,8 @@ function Home() {
           </ContentPage>
         </ContainerWrap>
         <div>
-          <DetailsYellowRight></DetailsYellowRight>
-          <DetailsPurpleRight></DetailsPurpleRight>
+          <PrimaryDetailRight></PrimaryDetailRight>
+          <SecondyDetailRight></SecondyDetailRight>
         </div>
       </Container>
     </Body>
