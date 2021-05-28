@@ -49,4 +49,53 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* css dos checkbox  
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--outline-color);
+  border-radius: 50%;
+  background-color: var(--white);
+margin-left: 15px;
+  margin-right: 15px;
+}
+
+
+input[type="radio"]:focus{
+  outline: none;
+} */
+
+label {
+  display: inline-block;
+  width: 150px;
+  /* padding: 10px; */
+  /* border: solid 2px #ccc; */
+  transition: all 0.3s;
+  /* color: white */
+
+  & img {
+	width: 20px;
+	height: 20px;
+	background-color: yellow;
+	border-radius: 50%;
+  }
+}
+
+/* input[type="radio"]:checked{
+  border: 6px solid red;
+  background-color: white;
+} */
+input[type="radio"] {
+  display: none;
+}
+
+/* input[type="radio"]:checked + label {
+  border: solid 2px green;
+} */
+
 `;

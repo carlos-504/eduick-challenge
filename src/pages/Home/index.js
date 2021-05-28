@@ -3,6 +3,7 @@ import React from 'react';
 import Header from '../../components/Header';
 import Button from '../../components/Button';
 import landImg from '../../assets/images/landingPage/land.png';
+import checkedIcon from '../../assets/images/landingPage/checked.svg';
 import {
   Body,
   Container,
@@ -17,6 +18,11 @@ import {
   GroupActions,
   RoleBox,
   InputRadio,
+  DetailsYellow,
+  DetailsPurple,
+  DetailsCircle,
+  DetailsYellowRight,
+  DetailsPurpleRight,
 } from './styles';
 
 function Home() {
@@ -25,7 +31,12 @@ function Home() {
       <Header />
       <Container>
         <ContainerWrap>
-          <LandImg src={landImg} alt="image-home" />
+          <div>
+            <LandImg src={landImg} alt="image-home" />
+            <DetailsYellow></DetailsYellow>
+            <DetailsPurple></DetailsPurple>
+            <DetailsCircle></DetailsCircle>
+          </div>
           <ContentPage>
             <Typography>
               <Title>Find your</Title>
@@ -39,18 +50,29 @@ function Home() {
             <InputSearch placeholder="Type here what are you looking for" />
             <GroupActions>
               <RoleBox>
-                <span></span>
-                <InputRadio type="radio" />
-                <label>I'M A TEACHER</label>
+                <input
+                  type="radio"
+                  id="android"
+                  name="skills"
+                  value="Android Development"
+                />
+                <label for="android">
+                  <img src={checkedIcon} />
+                  I'M A STUDENT
+                </label>
               </RoleBox>
               <RoleBox>
                 <InputRadio type="radio" />
-                <label>I'M A TEACHER</label>
+                <label>I'M A STUDENT</label>
               </RoleBox>
               <Button label="SEARCH" />
             </GroupActions>
           </ContentPage>
         </ContainerWrap>
+        <div>
+          <DetailsYellowRight></DetailsYellowRight>
+          <DetailsPurpleRight></DetailsPurpleRight>
+        </div>
       </Container>
     </Body>
   );
