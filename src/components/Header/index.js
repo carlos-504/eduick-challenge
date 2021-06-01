@@ -4,12 +4,14 @@ import {
   HeaderContainer,
   HeaderWrap,
   Navigation,
+  MenuToggle,
   Logo,
   NavList,
   NavItem,
+  Button,
 } from './styles';
 import logo from '../../assets/images/landingPage/logo.svg';
-import Button from '../Button';
+import menuToggle from '../../assets/images/landingPage/menu-hamburguer.svg';
 
 function Header() {
   return (
@@ -17,13 +19,14 @@ function Header() {
       <HeaderContainer>
         <HeaderWrap>
           <Navigation>
+            <MenuToggle src={menuToggle} />
             <Logo src={logo} alt="logo Eduick" />
             <NavList>
               <NavItem>How it Works</NavItem>
               <NavItem>About Us</NavItem>
             </NavList>
           </Navigation>
-          <Button label="Get Started" />
+          <Button>Get Started</Button>
         </HeaderWrap>
       </HeaderContainer>
     </>

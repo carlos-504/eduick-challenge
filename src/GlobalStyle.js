@@ -84,7 +84,7 @@ input[type="radio"]:focus{
 
 label {
   display: inline-block;
-  width: 150px;
+  /* width: 150px; */
   /* padding: 10px; */
   /* border: solid 2px #ccc; */
   transition: all 0.3s;
@@ -102,9 +102,9 @@ label {
   border: 6px solid red;
   background-color: white;
 } */
-input[type="radio"] {
+/* input[type="radio"] {
   display: none;
-}
+} */
 
 /* input[type="radio"]:checked + label {
   border: solid 2px green;

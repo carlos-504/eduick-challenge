@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Btn } from '../../components/Button/styles';
 import {
   white,
   beige,
@@ -15,6 +16,11 @@ const DetailsDash = styled.div`
   height: 680px;
   border-radius: 0 338px;
   position: relative;
+
+  @media (max-width: 767px) {
+    width: 208px;
+    height: 415px;
+  }
 `;
 
 export const Body = styled.div`
@@ -26,18 +32,39 @@ export const Body = styled.div`
   );
   height: 100vh;
   overflow: hidden;
+
+  @media (max-width: 767px) {
+    min-height: 100vh;
+    height: unset;
+  }
 `;
 
 export const Container = styled.main`
   display: flex;
   justify-content: center;
   margin-top: 90px;
+
+  @media (max-width: 767px) {
+    justify-content: unset;
+    margin-top: 25px;
+  }
 `;
 
 export const ContainerWrap = styled.div`
   display: flex;
   width: 55%;
   justify-content: space-between;
+
+  @media (max-width: 767px) {
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+
+  & .details-container {
+    display: flex;
+    justify-content: center;
+    max-height: 580px;
+  }
 `;
 
 export const LandImg = styled.img`
@@ -45,6 +72,13 @@ export const LandImg = styled.img`
   height: 680px;
   position: relative;
   z-index: 1;
+
+  @media (max-width: 767px) {
+    width: 208px;
+    height: 415px;
+    top: 63px;
+    left: 17px;
+  }
 `;
 
 export const ContentPage = styled.div`
@@ -59,35 +93,63 @@ export const Typography = styled.div`
   font-family: ${fontDash};
   width: 100%;
   line-height: 57px;
-`;
+  font-size: clamp(32px, 4vw, 48px);
 
-export const Title = styled.h1`
-  font-family: inherit;
-  font-weight: 400;
-  font-size: clamp(36px, 4vw, 48px);
-  color: ${white};
-`;
+  & .title {
+    font-family: inherit;
+    font-weight: 400;
+    color: ${white};
+  }
 
-export const SubTitle = styled.h2`
-  font-family: inherit;
-  font-size: clamp(36px, 4vw, 48px);
-  color: ${beige};
+  & .subtitle {
+    font-family: inherit;
+    color: ${beige};
+  }
+
+  @media (max-width: 767px) {
+    line-height: 40px;
+  }
 `;
 
 export const TextHome = styled.div`
   color: ${white};
   margin-top: 40px;
   line-height: 191.68%;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
 `;
 
-export const InputSearch = styled.input`
-  background-color: ${primaryPurple};
-  border: solid 1px ${borderColor};
-  color: ${white};
-  border-radius: 4px;
-  padding: 10px 20px;
-  margin-top: 40px;
-  font-size: 1rem;
+export const InputContainer = styled.div`
+  & .input-search {
+    background-color: ${primaryPurple};
+    border: solid 1px ${borderColor};
+    color: ${white};
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin-top: 40px;
+    font-size: 1rem;
+    width: 100%;
+
+    @media (max-width: 767px) {
+      min-width: 50%;
+      margin-top: 60px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    max-width: 87vw;
+  }
+`;
+
+export const Button = styled(Btn)`
+  width: 35%;
+  text-align: center;
+
+  @media (max-width: 767px) {
+    width: 50vh;
+  }
 `;
 
 export const GroupActions = styled.div`
@@ -97,6 +159,28 @@ export const GroupActions = styled.div`
   margin-top: 30px;
   color: ${white};
   font-weight: 700;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    align-items: unset;
+    margin-top: 15px;
+  }
+
+  & .group-role {
+    display: flex;
+    justify-content: space-between;
+    width: 62%;
+
+    @media (max-width: 767px) {
+      max-width: 87vw;
+      margin-bottom: 15px;
+      justify-content: unset;
+
+      & div:first-child {
+        margin-right: 30px;
+      }
+    }
+  }
 `;
 
 export const RoleBox = styled.div`
@@ -107,6 +191,12 @@ export const RoleBox = styled.div`
   font-size: 14px;
   display: flex;
   align-items: center;
+
+  @media (max-width: 767px) {
+    font-size: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
 `;
 
 export const InputRadio = styled.input`
@@ -122,6 +212,11 @@ export const PrimaryDetail = styled(DetailsDash)`
     rgba(255, 234, 164, 0) 3.65%,
     ${primaryDetailColor} 100%
   );
+
+  @media (max-width: 767px) {
+    bottom: 330px;
+    right: 6px;
+  }
 `;
 
 export const SecondyDetail = styled(DetailsDash)`
@@ -133,6 +228,11 @@ export const SecondyDetail = styled(DetailsDash)`
     rgba(134, 78, 253, 0) 100%
   );
   transform: rotate(-21.37deg);
+
+  @media (max-width: 767px) {
+    bottom: 696px;
+    right: 4px;
+  }
 `;
 
 export const DetailsCircle = styled.div`
@@ -148,6 +248,16 @@ export const DetailsCircle = styled.div`
     rgba(255, 199, 0, 0.4) 100%
   );
   border-radius: 0 50% 50% 50%;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+`;
+
+export const DetailsRight = styled.div`
+  @media (max-width: 767px) {
+    display: none;
+  }
 `;
 
 export const PrimaryDetailRight = styled(PrimaryDetail)`
