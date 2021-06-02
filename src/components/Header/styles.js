@@ -14,7 +14,7 @@ export const HeaderWrap = styled.header`
   width: 55%;
 
   @media (max-width: 767px) {
-    width: 80%;
+    width: 90%;
   }
 `;
 
@@ -28,8 +28,11 @@ export const MenuToggle = styled.img`
   display: none;
 
   @media (max-width: 767px) {
+    width: 24px;
+    height: 24px;
     margin-right: 20px;
     cursor: pointer;
+    display: block;
   }
 `;
 

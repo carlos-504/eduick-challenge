@@ -87,6 +87,12 @@ export const ContentPage = styled.div`
   width: 52%;
   min-width: 550px;
   margin-left: 30px;
+
+  @media (max-width: 767px) {
+    margin: 0 auto;
+    min-width: unset;
+    width: unset;
+  }
 `;
 
 export const Typography = styled.div`
@@ -174,11 +180,8 @@ export const GroupActions = styled.div`
     @media (max-width: 767px) {
       max-width: 87vw;
       margin-bottom: 15px;
-      justify-content: unset;
-
-      & div:first-child {
-        margin-right: 30px;
-      }
+      /* justify-content: unset; */
+      width: unset;
     }
   }
 `;
@@ -193,9 +196,12 @@ export const RoleBox = styled.div`
   align-items: center;
 
   @media (max-width: 767px) {
-    font-size: 10px;
+    font-size: 11px;
     padding-right: 10px;
     padding-left: 10px;
+    min-width: 130px;
+    width: 40vw;
+    height: 42px;
   }
 `;
 

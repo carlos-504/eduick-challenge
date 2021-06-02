@@ -8,6 +8,7 @@ export const Btn = styled.a`
   border-radius: 4px;
   background-color: #ffd74f;
   cursor: pointer;
+  text-align: center;
 
   &:hover {
     background-color: #eec845;

@@ -2,7 +2,6 @@ import React from 'react';
 
 import Header from '../../components/Header';
 import landImg from '../../assets/images/landingPage/land.png';
-import checkedIcon from '../../assets/images/landingPage/checked.svg';
 import {
   Body,
   Container,
