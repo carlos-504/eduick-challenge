@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import ModalLogin from '../ModalLogin';
-import logo from '../../assets/images/landingPage/logo.svg';
-import closeButton from '../../assets/images/landingPage/close-modal.svg';
+import { ReactComponent as Logo } from '../../assets/images/landingPage/logo.svg';
+import { ReactComponent as CloseButton } from '../../assets/images/landingPage/close-modal.svg';
 import {
   ModalContainer,
   ModalTop,
@@ -32,12 +32,8 @@ function ModalMenu() {
         open={openContext.open}
       >
         <ModalTop>
-          <img src={logo} alt="logo" />
-          <img
-            src={closeButton}
-            onClick={openContext.handleClose}
-            alt="close-button"
-          />
+          <Logo />
+          <CloseButton onClick={openContext.handleClose} />
         </ModalTop>
         <ModalContent>
           <ModelNavigation>

@@ -52,7 +52,7 @@ export const Container = styled.main`
 
 export const ContainerWrap = styled.div`
   display: flex;
-  width: 55%;
+  width: 75%;
   justify-content: space-between;
 
   @media (max-width: 767px) {
@@ -64,6 +64,7 @@ export const ContainerWrap = styled.div`
     display: flex;
     justify-content: center;
     max-height: 580px;
+    flex-grow: 1;
   }
 `;
 
@@ -86,7 +87,7 @@ export const ContentPage = styled.div`
   flex-direction: column;
   width: 52%;
   min-width: 550px;
-  margin-left: 30px;
+  margin-left: 40px;
 
   @media (max-width: 767px) {
     margin: 0 auto;
@@ -180,7 +181,6 @@ export const GroupActions = styled.div`
     @media (max-width: 767px) {
       max-width: 87vw;
       margin-bottom: 15px;
-      /* justify-content: unset; */
       width: unset;
     }
   }
@@ -194,6 +194,7 @@ export const RoleBox = styled.div`
   font-size: 14px;
   display: flex;
   align-items: center;
+  width: 48%;
 
   @media (max-width: 767px) {
     font-size: 11px;
@@ -261,6 +262,11 @@ export const DetailsCircle = styled.div`
 `;
 
 export const DetailsRight = styled.div`
+  @media (max-width: 1440px) {
+    position: relative;
+    right: -10px;
+    transition: 3s;
+  }
   @media (max-width: 767px) {
     display: none;
   }

@@ -7,12 +7,14 @@ import {
   fontDash,
   secondaryDetailColor,
   borderColor,
+  primaryPurple,
+  strongPurple,
 } from '../../GlobalStyle';
 
 export const ModalLoginContainer = styled(Dialog)`
   & .MuiPaper-root {
     color: ${white};
-    background: #6a40e4;
+    background: ${primaryPurple};
     width: 100%;
     height: 100%;
     margin: 0;
@@ -66,7 +68,7 @@ export const ImgContainer = styled.div`
   @media (min-width: 768px) {
     width: 51px;
     height: 51px;
-    background: #200e64;
+    background: ${strongPurple};
     border-radius: 50%;
     padding: 20px;
     vertical-align: middle;
@@ -79,14 +81,13 @@ export const ImgContainer = styled.div`
     cursor: pointer;
   }
 
-  & img {
+  & svg {
     width: 17px;
     height: 17px;
   }
 `;
 
 export const ModalLoginContent = styled(DialogContent)`
-  /* width: 100%; */
   display: flex;
   flex-direction: column;
   margin-top: 20px;
@@ -112,7 +113,7 @@ export const InputContainer = styled.div`
     padding-left: 10px;
   }
 
-  & img {
+  & svg {
     width: 24px;
     height: 24px;
     position: relative;

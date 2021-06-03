@@ -57,7 +57,7 @@ function Home() {
               <div className="group-role">
                 <RoleBox>
                   <InputRadio type="radio" />
-                  <label>I'M A STUDENT</label>
+                  <label>I'M A TEACHER</label>
                 </RoleBox>
                 <RoleBox>
                   <InputRadio type="radio" />

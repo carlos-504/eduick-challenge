@@ -1,7 +1,9 @@
 import React, { useContext, useState } from 'react';
-import viewPassIcon from '../../assets/images/landingPage/view-pass.svg';
-import hiddenPassIcon from '../../assets/images/landingPage/hidden-pass.svg';
-import closeButton from '../../assets/images/landingPage/close-modal.svg';
+import { useHistory } from 'react-router-dom';
+import { ReactComponent as ViewPassIcon } from '../../assets/images/landingPage/view-pass.svg';
+import { ReactComponent as HiddenPassIcon } from '../../assets/images/landingPage/hidden-pass.svg';
+import { ReactComponent as CloseButton } from '../../assets/images/landingPage/close-modal.svg';
+
 import {
   ModalLoginContainer,
   ModalLoginTop,
@@ -16,6 +18,7 @@ import { LoginContext } from '../../context';
 function ModalLogin() {
   const loginContext = useContext(LoginContext);
   const [viewPass, setViewPass] = useState(false);
+  const history = useHistory();
 
   return (
     <ModalLoginContainer
@@ -29,8 +32,7 @@ function ModalLogin() {
           <h2 className="subtitle">JUST LOGIN</h2>
         </div>
         <ImgContainer>
-          <img
-            src={closeButton}
+          <CloseButton
             onClick={loginContext.handleCloseLogin}
             alt="close-button"
           />
@@ -45,15 +47,13 @@ function ModalLogin() {
           <InputContainer>
             <label>Password:</label>
             <input type={viewPass ? 'text' : 'password'} />
-            <img
-              src={!viewPass ? viewPassIcon : hiddenPassIcon}
-              alt="view-password"
-              onClick={
-                !viewPass ? () => setViewPass(true) : () => setViewPass(false)
-              }
-            />
+            {!viewPass ? (
+              <ViewPassIcon onClick={() => setViewPass(true)} />
+            ) : (
+              <HiddenPassIcon onClick={() => setViewPass(false)} />
+            )}
           </InputContainer>
-          <Button>LOGIN</Button>
+          <Button onClick={() => history.push('/dashboard')}>LOGIN</Button>
         </FormLogin>
       </ModalLoginContent>
     </ModalLoginContainer>

@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 import { Dialog, DialogContent } from '@material-ui/core';
 import { Btn } from '../Button/styles';
-import { white } from '../../GlobalStyle';
+import { white, strongPurple } from '../../GlobalStyle';
 
 export const ModalContainer = styled(Dialog)`
   & .MuiPaper-root {
     color: ${white};
-    background: #200e64;
+    background: ${strongPurple};
     width: 100%;
     height: 100%;
     margin: 0;
@@ -20,19 +20,18 @@ export const ModalTop = styled.div`
   align-items: center;
   padding: 25px 15px;
 
-  & img:first-child {
+  & svg:first-child {
     width: 109px;
     height: 17px;
   }
 
-  & img:last-child {
+  & svg:last-child {
     width: 15px;
     height: 20px;
   }
 `;
 
 export const ModalContent = styled(DialogContent)`
-  /* width: 100%; */
   display: flex;
   flex-direction: column;
   justify-content: center;
