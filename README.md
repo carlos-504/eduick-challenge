@@ -30,7 +30,7 @@ dashboard consume dados de uma api para exibir seus produtos num catálogo.
 
 - BackEnd
 
-1. Baixe o repositório para sua máquina usando git clone ou sua chave ssh
+1. Baixe o repositório para sua máquina usando git clone ou sua chave ssh no link https://github.com/carlos-504/eduick-api
 
 2. Use npm install no projeto para baixar as dependências
 
